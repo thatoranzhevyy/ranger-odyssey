@@ -6,6 +6,11 @@ export default defineNuxtConfig({
   modules: ['@nuxt/image', '@nuxt/ui', '@nuxtjs/i18n', '@nuxt/scripts'],
   css: ['~/assets/css/tailwindcss.css'],
   app: { head: { script: [{ src: 'https://telegram.org/js/telegram-web-app.js' }] } },
+  runtimeConfig: {
+    public: {
+      telegramGuardEnabled: false,
+    },
+  },
   i18n: {
     locales: [
       { code: 'ru', iso: 'ru-RU', name: '🇷🇺 Русский', file: 'ru.json' },
