@@ -1,0 +1,17 @@
+{
+  "settings": {
+    "title": "Settings",
+    "description": "Customize the appearance of the application",
+    "theme": {
+      "title": "Appearance",
+      "toggle": {
+        "toDark": "Switch to dark theme",
+        "toLight": "Switch to light theme",
+        "system": "System theme (device default)"
+      }
+    },
+    "language": {
+      "title": "Language"
+    }
+  }
+}

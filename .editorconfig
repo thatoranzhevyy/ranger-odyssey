@@ -1,0 +1,32 @@
+# EditorConfig helps maintain consistent coding styles between editors and IDEs
+# See https://editorconfig.org for more details.
+
+# Top-most EditorConfig file
+root = true
+
+# General settings for all files
+[*]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+indent_size = 2
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# JavaScript, TypeScript, Vue files
+[*.{js,ts,vue}]
+indent_size = 2
+max_line_length = 80
+quote_type = single
+
+# JSON files
+[*.json]
+indent_size = 2
+
+# YAML files
+[*.{yml,yaml}]
+indent_size = 2
+
+# Markdown files
+[*.md]
+trim_trailing_whitespace = false
