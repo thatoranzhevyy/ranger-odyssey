@@ -1,6 +1,12 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import {useViewport} from 'vue-tg'
+const {safeAreaInset} = useViewport()
+const safeAreaInsetTop = safeAreaInset.value.top;
+</script>
 <template>
-  <UContainer>
+  <div class="w-full" :style="{height:`${safeAreaInsetTop}px`}"></div>
+  <div class="w-full" :style="{height:`${safeAreaInsetTop}px`}"></div>
+  <UContainer class="px-0">
     <slot />
   </UContainer>
   <div class="bg-default sticky bottom-0 z-50 h-(--ui-header-height) py-2">
