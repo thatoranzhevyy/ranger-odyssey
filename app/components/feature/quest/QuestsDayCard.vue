@@ -46,7 +46,7 @@ const isCompleted = computed(() => props.item.status === 'completed')
           :color="isLocked || inProgress ? 'primary' : 'neutral'"
           :disabled="isLocked || isCompleted"
           size="xs"
-          class="rounded-full uppercase text-[12px] font-semibold tracking-wide"
+          class="rounded-full uppercase text-[12px] text-white font-semibold tracking-wide"
           block
         />
       </div>
@@ -54,7 +54,7 @@ const isCompleted = computed(() => props.item.status === 'completed')
     <UIcon
       v-if="isLocked"
       name="i-ph-lock-key-fill"
-      class="w-1/3 absolute left-1/2 top-1/2 size-24 -translate-x-1/2 -translate-y-1/2"
+      class="w-1/3 absolute left-1/2 top-1/2 size-24 -translate-x-1/2 -translate-y-1/2 text-white/80"
     />
   </div>
 </template>

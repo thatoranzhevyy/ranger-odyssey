@@ -7,7 +7,7 @@ definePageMeta({ layout: 'empty' });
     <UEmpty
       variant="soft"
       title="Открыто вне Telegram"
-      description="Пожалуйста, откройте приложение через Telegram"
+      description="Пожалуйста, откройте приложение через Telegram Mini App"
     />
   </div>
 </template>
