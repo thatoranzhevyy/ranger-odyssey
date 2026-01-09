@@ -17,6 +17,10 @@ export const useTelegramAuth = async () => {
     return;
   }
 
+  useToast().add({
+    title: 'webApp.initData',
+    description: webApp.initData,
+  });
   const { token } = await $fetch<{ token: string }>(
     `${config.public.apiBase}/api/v1/auth/telegram`,
     {
