@@ -3,13 +3,14 @@ export default defineNuxtConfig({
   ssr: false,
   devtools: { enabled: true },
   components: [{ path: '~/components', pathPrefix: false }],
-  modules: ['@nuxt/image', '@nuxt/ui',  '@nuxt/scripts'],
+  modules: ['@nuxt/image', '@nuxt/ui', '@nuxt/scripts', '@pinia/nuxt'],
   colorMode: { preference: 'dark' },
   css: ['~/assets/css/tailwindcss.css'],
   app: { head: { script: [{ src: 'https://telegram.org/js/telegram-web-app.js' }] } },
   runtimeConfig: {
     public: {
-      telegramGuardEnabled: false,
+      apiBase: 'https://quests.tmbot.cc',
+      telegramGuardEnabled: true,
     },
   },
 });
