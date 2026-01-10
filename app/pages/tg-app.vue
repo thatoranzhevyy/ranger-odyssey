@@ -10,13 +10,14 @@ onMounted(() => {
   console.log('initData:', webApp.initData);
   console.log('initDataUnsafe:', webApp.initDataUnsafe);
 });
+const route = useRoute();
 </script>
 
 <template>
   <pre v-if="webApp">
     {{ webApp.initDataUnsafe }}
   </pre>
-  <pre v-if="webApp">
-    {{ webApp.initData }}
+  <pre>
+    {{ route }}
   </pre>
 </template>

@@ -6,7 +6,7 @@ definePageMeta({ layout: 'empty' });
   <div class="h-screen flex items-center justify-center">
     <UEmpty
       variant="soft"
-      title="Открыто вне Telegram"
+      title="Открыто вне Telegram Mini App"
       description="Пожалуйста, откройте приложение через Telegram Mini App"
     />
   </div>

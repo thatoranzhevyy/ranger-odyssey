@@ -11,13 +11,6 @@
         color="neutral"
         variant="soft"
         to="/rewards"
-      /><UButton
-        block
-        size="xl"
-        icon="i-ph-coins-bold"
-        color="neutral"
-        variant="soft"
-        to="/tg-app"
       />
     </div>
   </div>
