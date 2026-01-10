@@ -1,21 +1,17 @@
 <script setup lang="ts">
-import { useWebApp } from 'vue-tg';
-import { onMounted } from 'vue';
-
-const webApp = useWebApp();
-
-onMounted(() => {
-  if (!webApp) return;
-
-  console.log('initData:', webApp.initData);
-  console.log('initDataUnsafe:', webApp.initDataUnsafe);
-});
 // useHead({ bodyAttrs: { class: 'select-none' } });
 // onMounted(() => document.addEventListener('contextmenu', (event) => event.preventDefault()));
+const initDataUnsafe = ref('');
+const url = ref('');
+onMounted(() => {
+  initDataUnsafe.value = window.Telegram?.WebApp?.initDataUnsafe;
+  url.value = new URL(window.location.href);
+});
 </script>
+
 <template>
-  <pre>{{ webApp.initData }}</pre>
-  <pre>{{ webApp.initDataUnsafe }}</pre>
+  <pre>{{ initDataUnsafe }}</pre>
+  <pre>{{ url }}</pre>
   <UApp>
     <NuxtLayout>
       <NuxtPage />

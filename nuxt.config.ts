@@ -9,7 +9,7 @@ export default defineNuxtConfig({
   app: { head: { script: [{ src: 'https://telegram.org/js/telegram-web-app.js' }] } },
   runtimeConfig: {
     public: {
-      apiBase: 'https://quests.tmbot.cc',
+      apiBaseUrl: 'https://quests.tmbot.cc',
       telegramGuardEnabled: true,
     },
   },
