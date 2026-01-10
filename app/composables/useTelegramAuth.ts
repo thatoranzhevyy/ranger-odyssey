@@ -25,9 +25,9 @@ export const useTelegramAuth = async () => {
     `${config.public.apiBase}/api/v1/auth/telegram`,
     {
       method: 'POST',
-      body: {
-        initData: webApp.initData,
-      },
+      credentials: 'include',
+      headers: { 'Content-Type': 'application/json' },
+      body: webApp.initData,
     },
   );
   useToast().add({
