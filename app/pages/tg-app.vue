@@ -16,4 +16,7 @@ onMounted(() => {
   <pre v-if="webApp">
     {{ webApp.initDataUnsafe }}
   </pre>
+  <pre v-if="webApp">
+    {{ webApp.initData }}
+  </pre>
 </template>
