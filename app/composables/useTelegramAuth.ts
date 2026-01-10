@@ -28,6 +28,18 @@ export const useTelegramAuth = async () => {
       credentials: 'include',
       headers: { 'Content-Type': 'application/json' },
       body: webApp.initData,
+      onResponseError({ response }) {
+        useToast().add({
+          title: 'auth error HTTP:',
+          description: response.status,
+        });
+        useToast().add({
+          title: 'auth error DATA:',
+          description: response._data,
+        });
+        console.log('HTTP:', response.status);
+        console.log('DATA:', response._data);
+      },
     },
   );
   useToast().add({
